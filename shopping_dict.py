@@ -1,10 +1,11 @@
 shopping_dict = {
     "warzywniak": ["marchew", "rukola", "seler"],
-    "piekarnia": ["pączek", "bułki", "chleb"]
+    "piekarnia": ["pączek", "bułki", "chleb"],
 }
+no_of_items = 0
 for k, v in shopping_dict.items():
-    print(f"Idę do {k.capitalize()} i kupię tam {v}")
-list = shopping_dict.get("warzywniak") + shopping_dict.get("piekarnia")
-no_of_items = len(list)
+    no_of_items += len(v)
+    v_c = [item.capitalize() for item in v]
+    print(f"Idę do {k.capitalize()} i kupię tam {v_c}")
 print(f'W sumie kupię {no_of_items} produktów.')
-    
+print("Pozdrowienia z mroźnych Mazur :)")
